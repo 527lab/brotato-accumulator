@@ -1,0 +1,62 @@
+{
+	"name": "Accumulator",
+	"namespace": "David",
+	"version_number": "0.4.1",
+	"description": "Adds the Accumulator character: every N kills permanently improves a random primary or secondary stat in the player's favor.",
+	"website_url": "",
+	"dependencies": [],
+	"extra": {
+		"godot": {
+			"authors": [
+				"David"
+			],
+			"optional_dependencies": [],
+			"compatible_game_version": [
+				"1.1.15.4"
+			],
+			"compatible_mod_loader_version": [
+				"6.3.0"
+			],
+			"incompatibilities": [],
+			"load_before": [],
+			"tags": [
+				"Character"
+			],
+			"config_schema": {
+				"type": "object",
+				"properties": {
+					"kills_per_bonus": {
+						"type": "integer",
+						"title": "Kills Per Bonus",
+						"description": "Number of kills required to trigger +1 random stat.",
+						"default": 10,
+						"minimum": 1,
+						"maximum": 1000
+					},
+					"bonus_amount": {
+						"type": "integer",
+						"title": "Bonus Amount",
+						"description": "How much the chosen stat changes each time (always in the player's favor).",
+						"default": 1,
+						"minimum": 1,
+						"maximum": 20
+					},
+					"show_popup": {
+						"type": "boolean",
+						"title": "Show Popup",
+						"description": "Display a floating text popup when a stat bonus is triggered.",
+						"default": true
+					},
+					"enable_drawback": {
+						"type": "boolean",
+						"title": "Enable Drawback",
+						"description": "Start the run with -10% Damage as a drawback.",
+						"default": false
+					}
+				}
+			},
+			"description_rich": "",
+			"image": null
+		}
+	}
+}
